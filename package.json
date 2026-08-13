@@ -1,0 +1,42 @@
+{
+  "name": "user-management-api",
+  "version": "1.0.0",
+  "description": "RESTful API developed to practice **SDET (Software Development Engineer in Test)** concepts, including endpoint creation and automated testing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha \"tests/**/*.spec.js\"",
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nathanael2300/user-management-api.git"
+  },
+  "keywords": [],
+  "author": "Nathanael Henrique Souza Nunes",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Nathanael2300/user-management-api/issues"
+  },
+  "homepage": "https://github.com/Nathanael2300/user-management-api#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "morgan": "^1.10.1",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^10.4.0",
+    "chai": "^6.2.2",
+    "chai-as-promised": "^8.0.2",
+    "cypress": "^15.14.2",
+    "cypress-mochawesome-reporter": "^4.0.2",
+    "cypress-plugin-api": "^2.11.2",
+    "mocha": "^11.7.5",
+    "nodemon": "^3.1.14",
+    "sinon": "^21.1.2",
+    "supertest": "^7.2.2"
+  }
+}
