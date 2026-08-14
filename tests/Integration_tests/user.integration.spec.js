@@ -3,35 +3,34 @@ import userApi from "../helpers/userApi.js";
 import userFactory from "../factories/user.factory.js";
 
 describe("User Integration Tests", () => {
-
   const fields = [
-  "id",
-  "email",
-  "password",
-  "username",
-  "nickname",
-  "profilePicture",
-  "bio",
-  "phoneNumber",
-  "address",
-  "website",
-  "socialLinks",
-];
+    "id",
+    "email",
+    "password",
+    "username",
+    "nickname",
+    "profilePicture",
+    "bio",
+    "phoneNumber",
+    "address",
+    "website",
+    "socialLinks",
+  ];
 
-const valueTypes = {
-  id: "number",
-  email: "string",
-  password: "string",
-  username: "string",
-  nickname: "string",
-  profilePicture: "string",
-  bio: "string",
-  phoneNumber: "string",
-  address: "object",
-  website: "string",
-  socialLinks: "array",
-};
-  
+  const valueTypes = {
+    id: "number",
+    email: "string",
+    password: "string",
+    username: "string",
+    nickname: "string",
+    profilePicture: "string",
+    bio: "string",
+    phoneNumber: "string",
+    address: "object",
+    website: "string",
+    socialLinks: "array",
+  };
+
   let userId;
 
   beforeEach(async () => {
@@ -128,8 +127,14 @@ const valueTypes = {
         expect(resPut.body).to.be.an("object");
         expect(resPut.body.user.id).to.be.a("number");
         for (const keyUpdated of fields) {
+          const expectedUser = {
+            id: userId,
+            ...dataUpdated,
+          };
           expect(resPut.body.user).to.have.property(keyUpdated);
-          expect(resPut.body.user[keyUpdated]).to.eql(dataUpdated[keyUpdated]);
+          expect(resPut.body.user[keyUpdated]).to.deep.eql(
+            expectedUser[keyUpdated],
+          );
         }
       });
     });
