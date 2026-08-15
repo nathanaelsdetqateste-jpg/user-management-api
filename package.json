@@ -7,7 +7,7 @@
     "test": "mocha \"tests/**/*.spec.js\"",
     "test:e2e": "cypress run --spec \"tests/E2e/cypress/e2e/**/*.cy.js\"",
     "test:integration": "mocha \"tests/Integration_tests/**/*.spec.js\"",
-    "test:unitary": "mocha \"tests/unitary_tests/*.spec.js\"",
+    "test:unitary": "mocha \"tests/Unitary_tests/*.spec.js\"",
     "dev": "nodemon src/server.js",
     "start": "node src/server.js"
   },
