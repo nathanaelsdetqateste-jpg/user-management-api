@@ -4,12 +4,10 @@ on:
   push:
     branches:
       - main
-      - feature/**
 
   pull_request:
     branches:
       - main
-      - feature/**
 
 jobs:
   E2e-Tests:
