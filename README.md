@@ -119,7 +119,7 @@ npx mocha
 
 ##  Author
 
-| [<img src="https://github.com/nathanaelsdetqateste-jpg.png" width="75px"/><br/><sub><b>Nathanael Henrique Souza Nunes</b></sub>](https://github.com/nathanaelsdetqateste-jpg) |
+| [<img src="https://github.com/nathanael-sdet.png" width="75px"/><br/><sub><b>Nathanael Henrique Souza Nunes</b></sub>](https://github.com/nathanael-sdet) |
 | :---: |
 | QA Engineer / SDET |
 
